@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>LitLink</string>
 	<key>GEMINI_API_KEY</key>
-	<string>AIzaSyBWpsRJ66IjA9_jaFBSAengoP4S0H3GRlI</string>
+	<string>AIzaSyA8bFGumwHnxNkt-Bmrpt3wchz4-yZxqcw</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>LitLink needs microphone access to listen to your reading and help you improve pronunciation.</string>
 	<key>SUPABASE_URL</key>
