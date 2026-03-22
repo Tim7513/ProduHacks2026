@@ -7,20 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1000001 /* ProduHacksAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000 /* ProduHacksAppApp.swift */; };
-		A1000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002 /* ContentView.swift */; };
-		A1000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000004 /* Assets.xcassets */; };
+		340706342F701132001DFD6F /* prd.md in Resources */ = {isa = PBXBuildFile; fileRef = 340706332F70112B001DFD6F /* prd.md */; };
+		340706362F703C45001DFD6F /* LitLock.png in Resources */ = {isa = PBXBuildFile; fileRef = 340706352F703C45001DFD6F /* LitLock.png */; };
+		D1000001 /* ProduHacksAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000011 /* ProduHacksAppApp.swift */; };
+		D1000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000012 /* ContentView.swift */; };
+		D1000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1000013 /* Assets.xcassets */; };
+		D1000004 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000014 /* Theme.swift */; };
+		D1000005 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000015 /* Models.swift */; };
+		D1000006 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000016 /* Components.swift */; };
+		D1000007 /* LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000017 /* LockScreen.swift */; };
+		D1000008 /* ReadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000018 /* ReadingScreen.swift */; };
+		D1000009 /* SummaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000019 /* SummaryScreen.swift */; };
+		D100000A /* ParentDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100001A /* ParentDashboard.swift */; };
+		D100000B /* QuizModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100001B /* QuizModels.swift */; };
+		D100000C /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100001C /* QuizService.swift */; };
+		D100000D /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100001D /* QuizScreen.swift */; };
+		D100000E /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100001E /* SpeechRecognitionService.swift */; };
+		D100000F /* OnboardingScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000021 /* OnboardingScreens.swift */; };
+		D1000023 /* ParentSettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000022 /* ParentSettingsScreen.swift */; };
+		D1000024 /* BookLibraryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000025 /* BookLibraryScreen.swift */; };
+		D1000026 /* AppLockSettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000027 /* AppLockSettingsScreen.swift */; };
+		D1000028 /* ChildSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000029 /* ChildSelectionScreen.swift */; };
+		D100002C /* ScreenTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100002A /* ScreenTimeManager.swift */; };
+		D100002E /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100002D /* GeminiService.swift */; platformFilter = ios; };
+		D1000034 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000033 /* SupabaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A0FFFFFF /* ProduHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProduHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1000000 /* ProduHacksAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProduHacksAppApp.swift; sourceTree = "<group>"; };
-		A1000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A1000004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		340706332F70112B001DFD6F /* prd.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = prd.md; sourceTree = "<group>"; };
+		340706352F703C45001DFD6F /* LitLock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LitLock.png; sourceTree = "<group>"; };
+		D1000010 /* ProduHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProduHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1000011 /* ProduHacksAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProduHacksAppApp.swift; sourceTree = "<group>"; };
+		D1000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D1000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1000014 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D1000015 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		D1000016 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		D1000017 /* LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreen.swift; sourceTree = "<group>"; };
+		D1000018 /* ReadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingScreen.swift; sourceTree = "<group>"; };
+		D1000019 /* SummaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryScreen.swift; sourceTree = "<group>"; };
+		D100001A /* ParentDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboard.swift; sourceTree = "<group>"; };
+		D100001B /* QuizModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModels.swift; sourceTree = "<group>"; };
+		D100001C /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
+		D100001D /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
+		D100001E /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		D100001F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1000021 /* OnboardingScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreens.swift; sourceTree = "<group>"; };
+		D1000022 /* ParentSettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSettingsScreen.swift; sourceTree = "<group>"; };
+		D1000025 /* BookLibraryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookLibraryScreen.swift; sourceTree = "<group>"; };
+		D1000027 /* AppLockSettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockSettingsScreen.swift; sourceTree = "<group>"; };
+		D1000029 /* ChildSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildSelectionScreen.swift; sourceTree = "<group>"; };
+		D100002A /* ScreenTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeManager.swift; sourceTree = "<group>"; };
+		D100002B /* ProduHacksApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProduHacksApp.entitlements; sourceTree = "<group>"; };
+		D100002D /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+		D1000033 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A0FFFFFE /* Frameworks */ = {
+		D1000020 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -30,28 +74,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A0FFFFFD /* ProduHacksApp */ = {
+		D1000030 = {
 			isa = PBXGroup;
 			children = (
-				A1000000 /* ProduHacksAppApp.swift */,
-				A1000002 /* ContentView.swift */,
-				A1000004 /* Assets.xcassets */,
+				D1000031 /* ProduHacksApp */,
+				D1000032 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1000031 /* ProduHacksApp */ = {
+			isa = PBXGroup;
+			children = (
+				340706332F70112B001DFD6F /* prd.md */,
+				D1000011 /* ProduHacksAppApp.swift */,
+				D1000012 /* ContentView.swift */,
+				D1000013 /* Assets.xcassets */,
+				D1000014 /* Theme.swift */,
+				D1000015 /* Models.swift */,
+				D1000016 /* Components.swift */,
+				D1000017 /* LockScreen.swift */,
+				D1000018 /* ReadingScreen.swift */,
+				D1000019 /* SummaryScreen.swift */,
+				D100001A /* ParentDashboard.swift */,
+				D100001B /* QuizModels.swift */,
+				D100001C /* QuizService.swift */,
+				D100001D /* QuizScreen.swift */,
+				D100001E /* SpeechRecognitionService.swift */,
+				D1000021 /* OnboardingScreens.swift */,
+				D1000022 /* ParentSettingsScreen.swift */,
+				D1000025 /* BookLibraryScreen.swift */,
+				D1000027 /* AppLockSettingsScreen.swift */,
+				D1000029 /* ChildSelectionScreen.swift */,
+				D100002A /* ScreenTimeManager.swift */,
+				D100002D /* GeminiService.swift */,
+				D1000033 /* SupabaseService.swift */,
+				D100001F /* Info.plist */,
+				D100002B /* ProduHacksApp.entitlements */,
+				340706352F703C45001DFD6F /* LitLock.png */,
 			);
 			path = ProduHacksApp;
 			sourceTree = "<group>";
 		};
-		A0FFFFFC = {
+		D1000032 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0FFFFFD /* ProduHacksApp */,
-				A1000006 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		A1000006 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A0FFFFFF /* ProduHacksApp.app */,
+				D1000010 /* ProduHacksApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,13 +126,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0FFFFFE /* ProduHacksApp */ = {
+		D1000040 /* ProduHacksApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1000007 /* Build configuration list for PBXNativeTarget "ProduHacksApp" */;
+			buildConfigurationList = D1000050 /* Build configuration list for PBXNativeTarget "ProduHacksApp" */;
 			buildPhases = (
-				A0FFFFFD /* Sources */,
-				A0FFFFFE /* Frameworks */,
-				A0FFFFFF /* Resources */,
+				D1000041 /* Sources */,
+				D1000020 /* Frameworks */,
+				D1000042 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -73,25 +140,25 @@
 			);
 			name = ProduHacksApp;
 			productName = ProduHacksApp;
-			productReference = A0FFFFFF /* ProduHacksApp.app */;
+			productReference = D1000010 /* ProduHacksApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A0FFFFFB /* Project object */ = {
+		D1000060 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					A0FFFFFE = {
+					D1000040 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = A0FFFFFE /* Build configuration list for PBXProject "ProduHacksApp" */;
+			buildConfigurationList = D1000061 /* Build configuration list for PBXProject "ProduHacksApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -99,41 +166,62 @@
 				en,
 				Base,
 			);
-			mainGroup = A0FFFFFC;
-			productRefGroup = A1000006 /* Products */;
+			mainGroup = D1000030;
+			productRefGroup = D1000032 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0FFFFFE /* ProduHacksApp */,
+				D1000040 /* ProduHacksApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A0FFFFFF /* Resources */ = {
+		D1000042 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000005 /* Assets.xcassets in Resources */,
+				D1000003 /* Assets.xcassets in Resources */,
+				340706362F703C45001DFD6F /* LitLock.png in Resources */,
+				340706342F701132001DFD6F /* prd.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A0FFFFFD /* Sources */ = {
+		D1000041 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000003 /* ContentView.swift in Sources */,
-				A1000001 /* ProduHacksAppApp.swift in Sources */,
+				D1000002 /* ContentView.swift in Sources */,
+				D1000001 /* ProduHacksAppApp.swift in Sources */,
+				D1000004 /* Theme.swift in Sources */,
+				D1000005 /* Models.swift in Sources */,
+				D1000006 /* Components.swift in Sources */,
+				D1000007 /* LockScreen.swift in Sources */,
+				D1000008 /* ReadingScreen.swift in Sources */,
+				D1000009 /* SummaryScreen.swift in Sources */,
+				D100000A /* ParentDashboard.swift in Sources */,
+				D100000B /* QuizModels.swift in Sources */,
+				D100000C /* QuizService.swift in Sources */,
+				D100000D /* QuizScreen.swift in Sources */,
+				D100000E /* SpeechRecognitionService.swift in Sources */,
+				D100000F /* OnboardingScreens.swift in Sources */,
+				D1000023 /* ParentSettingsScreen.swift in Sources */,
+				D1000024 /* BookLibraryScreen.swift in Sources */,
+				D1000026 /* AppLockSettingsScreen.swift in Sources */,
+				D1000028 /* ChildSelectionScreen.swift in Sources */,
+				D100002C /* ScreenTimeManager.swift in Sources */,
+				D100002E /* GeminiService.swift in Sources */,
+				D1000034 /* SupabaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A1000008 /* Debug */ = {
+		D1000070 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -196,7 +284,7 @@
 			};
 			name = Debug;
 		};
-		A1000009 /* Release */ = {
+		D1000071 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -252,16 +340,19 @@
 			};
 			name = Release;
 		};
-		A100000A /* Debug */ = {
+		D1000072 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ProduHacksApp/ProduHacksApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WFP65GUA7Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProduHacksApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,16 +371,19 @@
 			};
 			name = Debug;
 		};
-		A100000B /* Release */ = {
+		D1000073 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ProduHacksApp/ProduHacksApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = WFP65GUA7Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProduHacksApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,25 +405,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0FFFFFE /* Build configuration list for PBXProject "ProduHacksApp" */ = {
+		D1000050 /* Build configuration list for PBXNativeTarget "ProduHacksApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A1000008 /* Debug */,
-				A1000009 /* Release */,
+				D1000072 /* Debug */,
+				D1000073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1000007 /* Build configuration list for PBXNativeTarget "ProduHacksApp" */ = {
+		D1000061 /* Build configuration list for PBXProject "ProduHacksApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A100000A /* Debug */,
-				A100000B /* Release */,
+				D1000070 /* Debug */,
+				D1000071 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A0FFFFFB /* Project object */;
+	rootObject = D1000060 /* Project object */;
 }

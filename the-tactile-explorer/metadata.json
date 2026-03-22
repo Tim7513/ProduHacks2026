@@ -1,0 +1,7 @@
+{
+  "name": "The Tactile Explorer",
+  "description": "A digital pop-up book reading adventure for children with parent-guided progress tracking.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

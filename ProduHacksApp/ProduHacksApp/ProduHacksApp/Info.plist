@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>LitLink</string>
+	<key>CFBundleName</key>
+	<string>LitLink</string>
+	<key>GEMINI_API_KEY</key>
+	<string>AIzaSyBWpsRJ66IjA9_jaFBSAengoP4S0H3GRlI</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>LitLink needs microphone access to listen to your reading and help you improve pronunciation.</string>
+	<key>SUPABASE_URL</key>
+	<string>https://xvjfppehefuxdvqqfysz.supabase.co</string>
+	<key>SUPABASE_PUBLISHABLE_KEY</key>
+	<string>sb_publishable_B2M8fFzHOVwepQxAi1NPwA_c6rGGJDc</string>
+	<key>SUPABASE_ANON_KEY</key>
+	<string>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh2amZwcGVoZWZ1eGR2cXFmeXN6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxNzcwMTYsImV4cCI6MjA4OTc1MzAxNn0.PhVpE2r5Fac6w46LkjmwLY_4tZ2R73tCjHO-gNqXEOs</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>LitLink uses speech recognition to verify that you&apos;re reading aloud and to provide pronunciation feedback.</string>
+</dict>
+</plist>
