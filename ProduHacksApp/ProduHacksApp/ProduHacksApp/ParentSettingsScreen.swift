@@ -299,8 +299,8 @@ struct ParentSettingsScreen: View {
                     requiredTestScore: requiredTestScore,
                     readingMinutes: dailyReadingMinutes,
                     readingRequirementMinutes: appData.readingRequirementMinutes,
-                    dailyScreenTimeLimitMinutes: 120,
-                    unlockDurationMinutes: 60,
+                    dailyScreenTimeLimitMinutes: appData.dailyScreenTimeLimitMinutes,
+                    unlockDurationMinutes: appData.unlockDurationMinutes,
                     selectedGenres: appData.availableGenres
                 )
             )

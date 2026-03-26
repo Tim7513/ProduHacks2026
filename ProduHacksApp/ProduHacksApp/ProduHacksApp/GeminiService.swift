@@ -22,8 +22,7 @@ final class GeminiService {
             return nil
         }
 
-        let trimmed = rawValue.trimmingCharacters(in: .whitespacesAndNewlines)
-        return trimmed.isEmpty ? nil : trimmed
+        return rawValue.sanitizedConfigurationValue
     }
 
     func generatePassage(

@@ -51,12 +51,12 @@ final class SupabaseService {
     private init() {}
 
     private var baseURL: String? {
-        Bundle.main.object(forInfoDictionaryKey: "SUPABASE_URL") as? String
+        (Bundle.main.object(forInfoDictionaryKey: "SUPABASE_URL") as? String)?.sanitizedConfigurationValue
     }
 
     private var apiKey: String? {
-        (Bundle.main.object(forInfoDictionaryKey: "SUPABASE_ANON_KEY") as? String)
-        ?? (Bundle.main.object(forInfoDictionaryKey: "SUPABASE_PUBLISHABLE_KEY") as? String)
+        (Bundle.main.object(forInfoDictionaryKey: "SUPABASE_ANON_KEY") as? String)?.sanitizedConfigurationValue
+        ?? (Bundle.main.object(forInfoDictionaryKey: "SUPABASE_PUBLISHABLE_KEY") as? String)?.sanitizedConfigurationValue
     }
 
     func authenticateGuardian(
@@ -638,5 +638,12 @@ private extension JSONDecoder {
 private extension String {
     var nilIfEmpty: String? {
         isEmpty ? nil : self
+    }
+
+    var sanitizedConfigurationValue: String? {
+        let trimmed = trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return nil }
+        guard !(trimmed.hasPrefix("$(") && trimmed.hasSuffix(")")) else { return nil }
+        return trimmed
     }
 }

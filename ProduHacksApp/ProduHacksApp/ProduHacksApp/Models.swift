@@ -241,6 +241,8 @@ class AppData: ObservableObject {
 
     @Published var selectedChildId: String? = nil
     @Published var readingRequirementMinutes: Int = 1 // Default 1 minute to unlock apps
+    @Published var dailyScreenTimeLimitMinutes: Int = 120
+    @Published var unlockDurationMinutes: Int = 60
 
     let mockGenreContent: [String: [String]] = [
         "Adventure": [
@@ -287,6 +289,8 @@ class AppData: ObservableObject {
         children[index].requiredTestScore = settings.requiredTestScore
         children[index].readingMinutes = settings.readingMinutes
         readingRequirementMinutes = settings.readingRequirementMinutes
+        dailyScreenTimeLimitMinutes = settings.dailyScreenTimeLimitMinutes
+        unlockDurationMinutes = settings.unlockDurationMinutes
 
         if selectedChildId == childId {
             childName = children[index].name

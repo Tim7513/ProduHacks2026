@@ -454,10 +454,14 @@ struct QuizScreen: View {
         let result = await quizService.completeQuiz(
             child: child,
             passage: activePassage,
-            unlockDurationMinutes: 60
+            unlockDurationMinutes: appData.unlockDurationMinutes
         )
 
         applyComprehensionDelta(result.comprehensionDelta)
+
+        if result.passed {
+            ScreenTimeManager.shared.beginUnlockSession(durationMinutes: result.unlockSession?.durationMinutes ?? appData.unlockDurationMinutes)
+        }
 
         quizPassed = result.passed
         finalScore = result.score

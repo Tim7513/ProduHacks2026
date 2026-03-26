@@ -11,6 +11,7 @@ struct ReadingScreen: View {
     @State private var hasRequestedPermissions = false
     @State private var showPermissionAlert = false
     @State private var permissionAlertMessage = ""
+    @State private var showReadingRequirementAlert = false
     @State private var selectedWord: String? = nil
     @State private var showWordDetail = false
     @State private var isGeneratingPassage = true
@@ -83,6 +84,11 @@ struct ReadingScreen: View {
                 message: Text(permissionAlertMessage),
                 dismissButton: .default(Text("OK"))
             )
+        }
+        .alert("Keep Reading", isPresented: $showReadingRequirementAlert) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text("Time is up, but you still need 80% reading accuracy before the quiz unlocks.")
         }
         .sheet(isPresented: $showWordDetail) {
             if let word = selectedWord, let passage = appData.currentReadingPassage, let child = activeChild {
@@ -393,8 +399,12 @@ struct ReadingScreen: View {
                 timeRemainingSeconds -= 1
             } else {
                 stopTimer()
-                withAnimation {
-                    currentScreen = .quiz
+                if canProceedToQuiz {
+                    withAnimation {
+                        currentScreen = .quiz
+                    }
+                } else {
+                    showReadingRequirementAlert = true
                 }
             }
         }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		340706342F701132001DFD6F /* prd.md in Resources */ = {isa = PBXBuildFile; fileRef = 340706332F70112B001DFD6F /* prd.md */; };
 		340706362F703C45001DFD6F /* LitLock.png in Resources */ = {isa = PBXBuildFile; fileRef = 340706352F703C45001DFD6F /* LitLock.png */; };
 		D1000001 /* ProduHacksAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000011 /* ProduHacksAppApp.swift */; };
 		D1000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1000012 /* ContentView.swift */; };
@@ -34,8 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		340706332F70112B001DFD6F /* prd.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = prd.md; sourceTree = "<group>"; };
 		340706352F703C45001DFD6F /* LitLock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LitLock.png; sourceTree = "<group>"; };
+		7E9A8F3426C1411400A4D221 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		D1000010 /* ProduHacksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProduHacksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1000011 /* ProduHacksAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProduHacksAppApp.swift; sourceTree = "<group>"; };
 		D1000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		D1000030 = {
 			isa = PBXGroup;
 			children = (
+				7E9A8F3426C1411400A4D221 /* Secrets.xcconfig */,
 				D1000031 /* ProduHacksApp */,
 				D1000032 /* Products */,
 			);
@@ -85,7 +85,6 @@
 		D1000031 /* ProduHacksApp */ = {
 			isa = PBXGroup;
 			children = (
-				340706332F70112B001DFD6F /* prd.md */,
 				D1000011 /* ProduHacksAppApp.swift */,
 				D1000012 /* ContentView.swift */,
 				D1000013 /* Assets.xcassets */,
@@ -183,7 +182,6 @@
 			files = (
 				D1000003 /* Assets.xcassets in Resources */,
 				340706362F703C45001DFD6F /* LitLock.png in Resources */,
-				340706342F701132001DFD6F /* prd.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +340,7 @@
 		};
 		D1000072 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9A8F3426C1411400A4D221 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -351,6 +350,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WFP65GUA7Y;
 				ENABLE_PREVIEWS = YES;
+				GEMINI_API_KEY = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ProduHacksApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -365,6 +365,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.produhacks.ProduHacksApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPABASE_ANON_KEY = "";
+				SUPABASE_PUBLISHABLE_KEY = "";
+				SUPABASE_URL = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,6 +376,7 @@
 		};
 		D1000073 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E9A8F3426C1411400A4D221 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +386,7 @@
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = WFP65GUA7Y;
 				ENABLE_PREVIEWS = YES;
+				GEMINI_API_KEY = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ProduHacksApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -396,6 +401,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.produhacks.ProduHacksApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPABASE_ANON_KEY = "";
+				SUPABASE_PUBLISHABLE_KEY = "";
+				SUPABASE_URL = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

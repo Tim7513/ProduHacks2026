@@ -16,6 +16,7 @@ struct AppLockSettingsScreen: View {
 
     @State private var dailyScreenTimeLimitMinutes: Int = 120
     @State private var readingRequirementMinutes: Int = 1
+    @State private var unlockDurationMinutes: Int = 60
     @State private var enableSchoolHoursLock: Bool = true
     @State private var schoolStartHour: Int = 8
     @State private var schoolEndHour: Int = 15
@@ -27,6 +28,12 @@ struct AppLockSettingsScreen: View {
 
     var lockedAppsCount: Int {
         screenTimeManager.selectedAppsToBlock.applicationTokens.count
+    }
+
+    var hasSelectedRestrictions: Bool {
+        !screenTimeManager.selectedAppsToBlock.applicationTokens.isEmpty
+        || !screenTimeManager.selectedAppsToBlock.categoryTokens.isEmpty
+        || !screenTimeManager.selectedAppsToBlock.webDomainTokens.isEmpty
     }
 
     var body: some View {
@@ -124,6 +131,30 @@ struct AppLockSettingsScreen: View {
                     }
 
                     LockSettingCard(
+                        icon: "lock.open.fill",
+                        title: "Unlock Duration After Quiz",
+                        color: Color.secondary
+                    ) {
+                        VStack(alignment: .leading, spacing: 16) {
+                            HStack {
+                                Text("Minutes apps stay unlocked")
+                                    .font(.lexendBody(14, weight: .semibold))
+                                    .foregroundColor(Color.onSurface)
+                                Spacer()
+                                Text("\(unlockDurationMinutes) min")
+                                    .font(.jakartaDisplay(16, weight: .bold))
+                                    .foregroundColor(Color.secondary)
+                            }
+
+                            Slider(value: Binding(
+                                get: { Double(unlockDurationMinutes) },
+                                set: { unlockDurationMinutes = Int($0) }
+                            ), in: 5...180, step: 5)
+                            .tint(Color.secondary)
+                        }
+                    }
+
+                    LockSettingCard(
                         icon: "building.2.fill",
                         title: "School Hours Lock",
                         color: Color(hex: "F59E0B")
@@ -207,12 +238,18 @@ struct AppLockSettingsScreen: View {
                     .familyActivityPicker(isPresented: $showAppPicker, selection: $screenTimeManager.selectedAppsToBlock)
 
                     Button(action: {
-                        if screenTimeManager.isAuthorized && lockedAppsCount > 0 {
-                            screenTimeManager.applyRestrictions()
+                        if screenTimeManager.isAuthorized {
+                            if hasSelectedRestrictions {
+                                screenTimeManager.applyRestrictions()
+                            } else {
+                                screenTimeManager.removeRestrictions()
+                            }
                         }
 
                         if let child = appData.selectedChild {
                             appData.readingRequirementMinutes = readingRequirementMinutes
+                            appData.dailyScreenTimeLimitMinutes = dailyScreenTimeLimitMinutes
+                            appData.unlockDurationMinutes = unlockDurationMinutes
                             Task {
                                 await persistAppLockSettings(for: child)
                             }
@@ -268,7 +305,9 @@ struct AppLockSettingsScreen: View {
             }
         }
         .onAppear {
+            dailyScreenTimeLimitMinutes = appData.dailyScreenTimeLimitMinutes
             readingRequirementMinutes = appData.readingRequirementMinutes
+            unlockDurationMinutes = appData.unlockDurationMinutes
         }
         .alert("Sync Error", isPresented: Binding(
             get: { saveErrorMessage != nil },
@@ -295,7 +334,7 @@ struct AppLockSettingsScreen: View {
                     readingMinutes: child.readingMinutes,
                     readingRequirementMinutes: readingRequirementMinutes,
                     dailyScreenTimeLimitMinutes: dailyScreenTimeLimitMinutes,
-                    unlockDurationMinutes: 60,
+                    unlockDurationMinutes: unlockDurationMinutes,
                     selectedGenres: appData.availableGenres
                 )
             )

@@ -176,6 +176,7 @@ struct SummaryScreen: View {
                             icon: "lock.open.fill",
                             variant: .primary
                         ) {
+                            ScreenTimeManager.shared.beginUnlockSession(durationMinutes: appData.unlockDurationMinutes)
                             appData.currentReadingPassage = nil
                             appData.hasAchieved80Percent = false
                             appData.isSilentReadingModeEnabled = false

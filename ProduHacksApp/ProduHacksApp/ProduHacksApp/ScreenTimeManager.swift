@@ -13,6 +13,9 @@ class ScreenTimeManager: ObservableObject {
     @Published var isAuthorized = false
     @Published var authorizationStatus: AuthorizationStatus = .notDetermined
     @Published var selectedAppsToBlock = FamilyActivitySelection()
+    @Published private(set) var unlockEndsAt: Date?
+
+    private var relockTimer: Timer?
 
     private init() {
         updateAuthorizationStatus()
@@ -36,6 +39,10 @@ class ScreenTimeManager: ObservableObject {
 
     // Apply app restrictions based on selected apps
     func applyRestrictions() {
+        relockTimer?.invalidate()
+        relockTimer = nil
+        unlockEndsAt = nil
+
         // Block selected apps
         store.shield.applications = selectedAppsToBlock.applicationTokens
         store.shield.applicationCategories = .specific(selectedAppsToBlock.categoryTokens)
@@ -51,6 +58,21 @@ class ScreenTimeManager: ObservableObject {
         store.shield.webDomains = nil
 
         print("Removed all app restrictions")
+    }
+
+    func beginUnlockSession(durationMinutes: Int) {
+        guard isAuthorized else { return }
+
+        let normalizedDuration = max(1, durationMinutes)
+        relockTimer?.invalidate()
+        removeRestrictions()
+
+        unlockEndsAt = Calendar.current.date(byAdding: .minute, value: normalizedDuration, to: Date())
+        relockTimer = Timer.scheduledTimer(withTimeInterval: TimeInterval(normalizedDuration * 60), repeats: false) { [weak self] _ in
+            Task { @MainActor in
+                self?.applyRestrictions()
+            }
+        }
     }
 
     // Check if apps should be blocked based on reading requirement
